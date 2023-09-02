@@ -30,6 +30,7 @@ An example from our predictions:
 
 ### Pytorch Unet 2 channels
 We trained this alternative network for 15 epochs and the same training details as before.
+
 Unfortunally, this is what we obtained:
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/30989a00-fe73-4577-ac70-67adc91b7bb0)
