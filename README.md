@@ -45,6 +45,12 @@ Unfortunally, this is what we obtained:
 Due to the fact that the loss at the end of the training is stabilized at a value of about 0.4, training the model further wouldn't be useful. Training the model for more epochs has lead us to predict all black images, as if the model had found how to minimize the loss in the easiest way possible.
 After having taken some experiments, we can't conclude that giving to the model the "hint" of the depth map helps the model predicting the segmentated image.
 
+## Disparity Map and Depth Map
+
+Initially we worked on Disparity Map method in order to estimate distance of detected objects, because of its reliablity and accuracy to identify the shapes. 
+But the model required a pair of images for each frame (one frome the "left eye" and the other for the "right eye"), this issue made the model unsuitable for the Unet, that is trained with a dataset composed by "monocular" images.
+Beacuse of this we moved on to a more suitable method so we chose MiDaS model, that computes depth map starting from a single image.
+Even if MiDaS procvides a low quality map compared to the Disparity Map, it comes with better scalability that made the combination between Unet mask and distance map very easy.
 
 ## Depth Map
 
