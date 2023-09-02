@@ -1,6 +1,6 @@
 # Vision and Perception - Final Project
 
-By Giulia Nardini, Charlotte Ludovica Primiceri, Carmine Zito
+## By Giulia Nardini, Charlotte Ludovica Primiceri, Carmine Zito
 
 ## Introduction
 For our final project we have focused on the OBJECT DETECTION TASK performed on the Cityscapes Dataset.
