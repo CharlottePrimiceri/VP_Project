@@ -3,7 +3,7 @@
 -------------------- By Giulia Nardini, Charlotte Ludovica Primiceri, Carmine Zito --------------------------
 
 ## Introduction
-For our final project we have focused on the OBJECT DETECTION TASK performed on the Cityscapes Dataset.
+For our final project we have focused on the OBJECT DETECTION TASK performed on videos in the Cityscapes Dataset.
 
 Our aim was to investigate wheter the segmentation task could be improved or not training models on the depth maps and the optical flow graphic representations in addiction to original images.
 
