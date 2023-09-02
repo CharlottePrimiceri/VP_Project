@@ -1,4 +1,4 @@
-# Vision
+# Vision and Perception - Final Project
 
 For our final project we have focused on the OBJECT DETECTION TASK performed on the Cityscapes Dataset.
 
