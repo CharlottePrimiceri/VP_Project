@@ -59,7 +59,9 @@ Lucas-Kanade:
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/18f40f4e-1320-4093-a297-e269d041c165)
 
-![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/736446aa-40cf-4de3-a13c-24ad3d7f78c9)
+![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/8e937b50-5b61-4ee2-ae30-7756f9fcd055)
+
+![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/1b2c4fa3-682e-4213-91ad-b47a7beb1a8a)
 
 
 ## Showing results
