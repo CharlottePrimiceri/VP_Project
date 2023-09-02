@@ -55,6 +55,13 @@ Different ways tried out: .... show results
 
 To compute the optical flow we implemented the Lucas-Kanade algorithm and compared it with the output obtained with the FlowNet.
 
+Lucas-Kanade: 
+
+![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/18f40f4e-1320-4093-a297-e269d041c165)
+
+![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/736446aa-40cf-4de3-a13c-24ad3d7f78c9)
+
+
 ## Showing results
 
 
