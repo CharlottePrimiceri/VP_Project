@@ -32,6 +32,9 @@ An example from our predictions:
 We trained this alternative network for 15 epochs and the same training details as before.
 Unfortunally, this is what we obtained:
 
+![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/30989a00-fe73-4577-ac70-67adc91b7bb0)
+
+
 Due to the fact that the loss at the end of the training is stabilized at a value of about 0.4, training the model further wouldn't be useful. Training the model for more epochs has lead us to predict all black images, as if the model had found how to minimize the loss in the easiest way possible.
 After having taken some experiments, we can't conclude that giving to the model the "hint" of the depth map helps the model predicting the segmentated image.
 
