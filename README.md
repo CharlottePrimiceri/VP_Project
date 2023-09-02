@@ -29,7 +29,9 @@ Target example:
 
 We trained from start the orginal Pytorch Unet for 15 epochs and the result we got was not so distant from the target. 
 
-An example from our predictions:
+Some examples from our predictions:
+
+![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/2f3b7dfd-cba0-4dc0-a55b-1e4f983ef106)
 
 
 ### Pytorch Unet 2 channels
