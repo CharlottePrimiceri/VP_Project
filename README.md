@@ -20,6 +20,7 @@ We tried to perform fine-tuning of the Mask-RCNN on the cityscapes dataset and w
 We didn't manage to re-train the Mask-RCNN due to lack of computational resources and the complexity of the model (...), so at the end we opted for the Pytorch Unet, a simpler model on which we made more experiments.
 ### Pytorch Unet 1 channel
 Target example:
+
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/01be8415-b49e-44ce-b896-53868e6ba2f2)
 
 We trained from start the orginal Pytorch Unet for 15 epochs and the result we got was not so distant from the target. 
@@ -36,7 +37,9 @@ After having taken some experiments, we can't conclude that giving to the model 
 
 
 ## Depth Map
+
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/c562fef0-d3c7-4729-9c0d-37f968e20715)
+
 Different ways tried out: .... show results
 
 
