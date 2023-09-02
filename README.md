@@ -66,7 +66,7 @@ Lucas-Kanade:
 
 ## Showing results
 
-To have a look at our results on video segmentation please go to code > 
+To have a look at our results on video segmentation please go to the segmented_video folder!
 
 ## References:
 - Cityscapes dataset: https://www.cityscapes-dataset.com
