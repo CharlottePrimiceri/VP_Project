@@ -10,14 +10,15 @@ We have performed image segmentation on a video taken from Cityscapes Dataset us
   2)  Pytorch Unet with double input channel (that we trained from start)
   3)  Pytorch Unet with single input channel (as original, that we trained from start)
 
-## Models introduction
+## Models and Experiments
 ### Mask-RCNN
+#### Cityscapes to COCO conversion
+We tried to perform fine-tuning of the Mask-RCNN on the cityscapes dataset and we transformed our dataset in COCO format.
+We didn't manage to re-train the Mask-RCNN due to lack of computational resources and the comlexity of the model (...), so at the end we opted for the Pytorch Unet, a simpler model on which we made more experiments.
 ### Pytorch Unet 1 channel
 ### Pytorch Unet 2 channels
 
-## Cityscapes to COCO conversion
-We tried to perform fine-tuning of the Mask-RCNN on the cityscapes dataset and we transformed our dataset in COCO format.
-We didn't manage to re-train the Mask-RCNN due to lack of computational resources and the comlexity of the model (...), so at the end we opted for the Pytorch Unet, a simpler model on which we made more experiments.
+
 
 ## Depth Map
 
@@ -25,6 +26,9 @@ We didn't manage to re-train the Mask-RCNN due to lack of computational resource
 ## Optical flow
 
 To compute the optical flow we implemented the Lucas-Kanade algorithm and compared it with the output obtained with the FlowNet.
+
+## Showing results
+
 
 ## References:
 - Cityscapes dataset: https://www.cityscapes-dataset.com
