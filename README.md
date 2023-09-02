@@ -50,7 +50,7 @@ After having taken some experiments, we can't conclude that giving to the model 
 Initially we worked on Disparity Map method in order to estimate distance of detected objects, because of its reliablity and accuracy to identify the shapes. 
 But the model required a pair of images for each frame (one frome the "left eye" and the other for the "right eye"), this issue made the model unsuitable for the Unet, that is trained with a dataset composed by "monocular" images.
 Beacuse of this we moved on to a more suitable method so we chose MiDaS model, that computes depth map starting from a single image.
-Even if MiDaS procvides a low quality map compared to the Disparity Map, it comes with better scalability that made the combination between Unet mask and distance map very easy.
+Even if MiDaS provides a low quality map compared to the Disparity Map, it comes with better scalability that made the combination between Unet mask and distance map very easy.
 
 ## Depth Map
 
