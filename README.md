@@ -15,6 +15,10 @@ We have performed image segmentation on a video taken from Cityscapes Dataset us
 ## Models and Experiments
 ### Mask-RCNN
 
+![stuttgart_02_000000_005395_leftImg8bit](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/98b510ac-ecb1-4775-89a4-a30555609e85)
+
+![stuttgart_02_000000_005813_leftImg8bit](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/81571945-8670-43ef-9c4b-1ae4fded5c1d)
+
 #### Cityscapes to COCO conversion
 We tried to perform fine-tuning of the Mask-RCNN on the cityscapes dataset and we transformed our dataset in COCO format.
 We didn't manage to re-train the Mask-RCNN due to lack of computational resources and the complexity of the model (...), so at the end we opted for the Pytorch Unet, a simpler model on which we made more experiments.
