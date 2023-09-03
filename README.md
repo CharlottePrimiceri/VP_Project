@@ -61,7 +61,7 @@ Different ways tried out: .... show results
 
 ## Optical flow
 
-To compute the optical flow we implemented the Lucas-Kanade algorithm and compared it with the output obtained with the FlowNet.
+To compute the optical flow at the beginning we were thinking of applying a pre-trained model, then we implemented the Lucas-Kanade algorithm.
 
 Lucas-Kanade: 
 
