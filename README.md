@@ -82,7 +82,6 @@ TO HAVE A LOOK AT OUR FINAL RESULTS ON VIDEO SEGMENTATION PLEASE GO TO segmented
 - Mask-RCNN: https://openaccess.thecvf.com/content_ICCV_2017/papers/He_Mask_R-CNN_ICCV_2017_paper.pdf
 - Mask-RCNN with disparity map and optical flow: https://github.com/thiagortk/maskRCNN-DisparityMap-OpicalFlow
 - Detecron2: https://github.com/facebookresearch/detectron2/blob/main/MODEL_ZOO.md
-- FlowNet: 
   
 
 
