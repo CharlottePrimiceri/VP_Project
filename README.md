@@ -83,6 +83,7 @@ TO HAVE A LOOK AT OUR FINAL RESULTS ON VIDEO SEGMENTATION PLEASE GO TO segmented
 - Mask-RCNN with disparity map and optical flow: https://github.com/thiagortk/maskRCNN-DisparityMap-OpicalFlow
 - Detectron2: https://github.com/facebookresearch/detectron2/blob/main/MODEL_ZOO.md
 - U-Net: https://github.com/goldbattle/pytorch_unet/tree/master
+- Optical Flow Trajectories: https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html
   
 
 
