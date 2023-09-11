@@ -5,12 +5,12 @@
 ## Introduction
 For our final project we have focused on the OBJECT DETECTION TASK performed on videos in the Cityscapes Dataset.
 
-Our aim was to investigate whether the segmentation task could be improved or not training models on the depth maps and the optical flow graphic representations in addiction to original images.
+Our aim was to investigate whether the segmentation task could be improved or not training deep learning models on the depth maps. At the beginning we tought about enforcing the prediction of the segmented images through the graphic representation of the optical flow, but unfortunately this was far beyond our possibilities. Anyway, we applied an algorithm in order to plot the trajectories of segmented objects in videos based on the optical flow computation, which we implemented also "by hand".
 
 We have performed image segmentation on a video taken from Cityscapes Dataset using three different models:
-  1)  Mask-RCNN pre-trained on COCO Dataset (Detectron2 implementation)
-  2)  Pytorch Unet with double input channel
-  3)  Pytorch Unet with single input channel (as original, that we trained from start)
+  1)  Mask-RCNN pre-trained on COCO Dataset (Detectron2 implementation);
+  2)  Pytorch Unet with double input channel trained from start;
+  3)  Pytorch Unet with single input channel re-trained from start for comparisons with 2).
 
 ## Models and Experiments
 ### Mask-RCNN
