@@ -20,11 +20,11 @@ We have performed image segmentation on a video taken from Cityscapes Dataset us
 ![stuttgart_02_000000_005813_leftImg8bit](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/81571945-8670-43ef-9c4b-1ae4fded5c1d)
 
 #### Cityscapes to COCO conversion
-We tried to perform fine-tuning of the Mask-RCNN on the Cityscapes Dataset and we transformed our dataset in COCO format.
+We tried to perform fine-tuning of the Mask-RCNN on the Cityscapes Dataset and we transformed our dataset annotations in COCO format because this is the requested input for this model in Detectron2.
 We didn't manage to re-train the Mask-RCNN due to lack of computational resources and the complexity of the model (...), so at the end we opted for the Pytorch Unet, a simpler model on which we made more experiments. We also realized that it makes no sense to continue training a model that has already reached very high performances.
 
 #### Model settings
-We were interested in classifying and segmented only three classes (pedestrians, cars, bycicles) and so to have a clear output segmentation we set shades of the same color for each category. We worked with a 'cpu' accelerator to make predictions. We registered a Costum Dataset in Detectron2 
+Because we were interested in classifying and segmenting only three classes (pedestrians, cars, bycicles) we filtered our annotations to focus only on these categories. Moreover, in order to show a better visualization of the output predictions we set the segmentation color as shades of the same tone for each category. As another pre processing step we had to register our costum dataset (cityscapes with filtered coco annotations). We specify that we worked with a 'cpu' accelerator to make predictions. 
 
 ### Pytorch Unet 1 channel
 Target example:
