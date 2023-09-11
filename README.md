@@ -72,6 +72,7 @@ But the model required a pair of images for each frame (one frome the "left eye"
 Beacuse of this we moved on to a more suitable method so we chose MiDaS model, that computes depth map starting from a single image.
 Even if MiDaS provides a low quality map compared to the Disparity Map, it comes with better scalability that made the combination between Unet mask and distance map very easy.
 
+![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/d8e56dea-1519-439b-a00e-9300640f96fe)
 
 
 ## Optical flow
