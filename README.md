@@ -65,7 +65,8 @@ Different ways tried out: .... show results
 
 ## Optical flow
 
-To compute the optical flow at the beginning we were thinking of applying a pre-trained model, then we implemented the Lucas-Kanade algorithm.
+-----To compute the optical flow at the beginning we were thinking of applying a pre-trained model, then we implemented the Lucas-Kanade algorithm. ------
+Unfortunately, for our initial lack of gpu power, we couldn't implement the optical flow computation through a CNN such as FlowNet2. So we first implement Lucas-Kanade's Optical Flow (as shown in lucas_kanade_optical_flow.ipynb) from scratch to learn how to show its magnitude and orientation and to compute the mean of the velocity of an object as a future work. After that, we decided to estimate it through its OpenCv function to track the feature of a moving object in a video. 
 
 Lucas-Kanade: 
 
@@ -75,6 +76,13 @@ Lucas-Kanade:
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/1b2c4fa3-682e-4213-91ad-b47a7beb1a8a)
 
+## Pre-Process of videos
+
+Our chosen videos are pre processed (divided in frames) and passed through the segmentation model of the Mask R-CNN and Pytorch Unet. 
+
+## Compute Trajectories
+
+We chose two kind of videos: the first one is a snippet of a longer video from the Cityscapes site where the camera is moving torwards some people that are passing a stree. Here we saw that the main problem is the fact that in this moving scenes also other objects in the background, in which we are not interested, are tracked by the algorithm because the camera it's moving! So we pick another video with a 
 
 ## Showing results
 
