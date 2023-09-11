@@ -77,13 +77,13 @@ Lucas-Kanade:
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/1b2c4fa3-682e-4213-91ad-b47a7beb1a8a)
 
-## Pre-Process of videos
+# Pre-Process of videos
 
 Our chosen videos are pre processed (divided in frames) and passed both through the segmentation model of the Mask R-CNN and Pytorch Unet. 
 In order to clear the view of the rgb segmentation of the Mask R-CNN we set the focus only on the main category that appears in the videos (for the first one only pedestrian and the second one only cars).
 The frames are sorted in the right order and then reunited to generate the new videos. This process is shown in MaskRCNN_and_Unet_segmented_video.ipynb file in the segmented_video folder where we can also find all the final videos.
 
-## Compute Trajectories
+# Compute Trajectories
 
 We chose two kind of videos: the first one is a snippet of a longer video from the Cityscapes site where the camera is moving torwards some people that are passing a street. Here we saw that the main problem is the fact that in this moving scenes also other objects in the background, in which we are not interested, are tracked by the algorithm because the camera it's moving! So we pick another video with a static camera and cars moving. As we can see the number of trajectories only follow them. However the presence of the bounded boxes and the category name that appear for each instance maybe cause some disturbance to the algorithm. 
 
