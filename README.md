@@ -47,6 +47,7 @@ Some examples from our predictions:
 
 #### Model evaluation
 
+![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/2d004754-c3ab-4a8c-8843-f9a508ccbbd6)
 
 ### Pytorch Unet 2 channels
 We trained this alternative network for 15 epochs and the same training details as before.
@@ -68,6 +69,7 @@ After having taken some experiments, we can't conclude that giving to the model 
 #### Train loss curve:
 
 #### Model evaluation:
+
 
 ## Disparity Map and Depth Map
 
