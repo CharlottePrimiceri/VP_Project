@@ -45,6 +45,7 @@ Some examples from our predictions:
 
 #### Train loss curve:
 
+#### Model evaluation
 
 
 ### Pytorch Unet 2 channels
@@ -65,6 +66,8 @@ After having taken some experiments, we can't conclude that giving to the model 
 - accelerator: 'gpu'
 
 #### Train loss curve:
+
+#### Model evaluation:
 
 ## Disparity Map and Depth Map
 
