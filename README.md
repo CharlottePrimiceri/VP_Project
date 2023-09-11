@@ -59,10 +59,10 @@ Due to the fact that the loss at the end of the training is stabilized at a valu
 After having taken some experiments, we can't conclude that giving to the model the "hint" of the depth map helps the model predicting the segmentated image.
 
 #### Training details:
-- batch_size:
-- learning_rate:
-- epochs:
-- accelerator:
+- batch_size: 16
+- learning_rate: 0.0002
+- epochs: 50
+- accelerator: 'gpu'
 
 #### Train loss curve:
 
