@@ -38,12 +38,13 @@ Some examples from our predictions:
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/2f3b7dfd-cba0-4dc0-a55b-1e4f983ef106)
 
 #### Training details:
-- batch_size:
-- learning_rate:
-- epochs:
-- accelerator:
+- batch_size: 16
+- learning_rate: 0.0002
+- epochs: 50
+- accelerator: 'gpu'
 
 #### Train loss curve:
+
 
 
 ### Pytorch Unet 2 channels
