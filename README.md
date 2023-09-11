@@ -24,7 +24,7 @@ We tried to perform fine-tuning of the Mask-RCNN on the Cityscapes Dataset and w
 We didn't manage to re-train the Mask-RCNN due to lack of computational resources and the complexity of the model (...), so at the end we opted for the Pytorch Unet, a simpler model on which we made more experiments. We also realized that it makes no sense to continue training a model that has already reached very high performances.
 
 #### Model settings
-We were interested in classifying and segmented only three classes (pedestrians, cars, bycicles) and so to have a clear output segmentation we set shades of the same color for each category. We worked with a 'cpu' accelerator to make predictions.
+We were interested in classifying and segmented only three classes (pedestrians, cars, bycicles) and so to have a clear output segmentation we set shades of the same color for each category. We worked with a 'cpu' accelerator to make predictions. We registered a Costum Dataset in Detectron2 
 
 ### Pytorch Unet 1 channel
 Target example:
