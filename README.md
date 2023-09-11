@@ -37,13 +37,13 @@ Some examples from our predictions:
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/2f3b7dfd-cba0-4dc0-a55b-1e4f983ef106)
 
-####Training details:
+#### Training details:
 - batch_size:
 - learning_rate:
 - epochs:
 - accelerator:
 
-####Train loss curve:
+#### Train loss curve:
 
 
 ### Pytorch Unet 2 channels
@@ -56,6 +56,14 @@ Unfortunally, this is what we obtained:
 
 Due to the fact that the loss at the end of the training is stabilized at a value of about 0.4, training the model further wouldn't be useful. Training the model for more epochs has lead us to predict all black images, as if the model had found how to minimize the loss in the easiest way possible.
 After having taken some experiments, we can't conclude that giving to the model the "hint" of the depth map helps the model predicting the segmentated image.
+
+#### Training details:
+- batch_size:
+- learning_rate:
+- epochs:
+- accelerator:
+
+#### Train loss curve:
 
 ## Disparity Map and Depth Map
 
