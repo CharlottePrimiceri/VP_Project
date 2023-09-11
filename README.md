@@ -67,7 +67,7 @@ Different ways tried out: .... show results
 
 -----To compute the optical flow at the beginning we were thinking of applying a pre-trained model, then we implemented the Lucas-Kanade algorithm. ------
 
-Unfortunately, for our initial lack of gpu power, we couldn't implement the optical flow computation through a CNN such as FlowNet2. So we first implement Lucas-Kanade's Optical Flow (as shown in lucas_kanade_optical_flow.ipynb) from scratch to learn how to show its magnitude and orientation and to compute the mean of the velocity of an object as a future work. After that, we decided to estimate it through its OpenCv function to track the feature of a moving object in a video. 
+Unfortunately, for our initial lack of gpu power, we couldn't implement the optical flow computation through a CNN such as FlowNet2. So we first implement Lucas-Kanade's Optical Flow (as shown in lucas_kanade_optical_flow.ipynb) from scratch to learn how to show its magnitude and orientation and to compute the mean of the velocity of an object as a future work. After that, we decided to estimate it through its OpenCv function (see the code in optical_flow_trajectories.py) to track the feature of a moving object in a video. 
 
 Lucas-Kanade: 
 
