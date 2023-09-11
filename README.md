@@ -45,7 +45,9 @@ Some examples from our predictions:
 
 #### Train loss curve:
 
-#### Model evaluation: accuracy: 0.9446
+#### Model evaluation: 
+
+##### accuracy: 0.9446
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/2d004754-c3ab-4a8c-8843-f9a508ccbbd6)
 
