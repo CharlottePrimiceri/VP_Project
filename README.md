@@ -37,6 +37,14 @@ Some examples from our predictions:
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/2f3b7dfd-cba0-4dc0-a55b-1e4f983ef106)
 
+####Training details:
+- batch_size:
+- learning_rate:
+- epochs:
+- accelerator:
+
+####Train loss curve:
+
 
 ### Pytorch Unet 2 channels
 We trained this alternative network for 15 epochs and the same training details as before.
@@ -64,8 +72,6 @@ Different ways tried out: .... show results
 
 
 ## Optical flow
-
------To compute the optical flow at the beginning we were thinking of applying a pre-trained model, then we implemented the Lucas-Kanade algorithm. ------
 
 Unfortunately, for our initial lack of gpu power, we couldn't implement the optical flow computation through a CNN such as FlowNet2. So we first implement Lucas-Kanade's Optical Flow (as shown in lucas_kanade_optical_flow.ipynb) from scratch to learn how to show its magnitude and orientation and to compute the mean of the velocity of an object as a future work. After that, we decided to estimate it through its OpenCv function (see the code in optical_flow_trajectories.py) to track the feature of a moving object in a video. 
 
