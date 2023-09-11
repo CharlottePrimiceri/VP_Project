@@ -5,7 +5,7 @@
 ## Introduction
 For our final project we have focused on the OBJECT DETECTION TASK performed on videos in the Cityscapes Dataset.
 
-Our aim was to investigate wheter the segmentation task could be improved or not training models on the depth maps and the optical flow graphic representations in addiction to original images.
+Our aim was to investigate whether the segmentation task could be improved or not training models on the depth maps and the optical flow graphic representations in addiction to original images.
 
 We have performed image segmentation on a video taken from Cityscapes Dataset using three different models:
   1)  Mask-RCNN pre-trained on COCO Dataset (Detectron2 implementation)
