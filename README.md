@@ -97,7 +97,7 @@ After having taken some experiments, we **can't conclude that giving to the mode
 ##### accuracy with 50 epochs:
 ##### accuracy with 20 epochs: ##########################
 
-## Disparity Map and Depth Map
+# Disparity Map and Depth Map
 
 Initially we worked on Disparity Map method in order to estimate distance of detected objects, because of its reliablity and accuracy to identify the shapes. 
 But the model required a pair of images for each frame (one frome the "left eye" and the other for the "right eye"), this issue made the model unsuitable for the U-Net, that is trained with a dataset composed by "monocular" images.
@@ -107,7 +107,7 @@ Even if MiDaS provides a low quality map compared to the Disparity Map, it comes
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/d8e56dea-1519-439b-a00e-9300640f96fe)
 
 
-## Optical flow
+# Optical flow
 
 Unfortunately, for our initial lack of gpu power, we couldn't implement the optical flow computation through a CNN such as FlowNet2. So we first implement Lucas-Kanade's Optical Flow (as shown in lucas_kanade_optical_flow.ipynb) from scratch to learn how to show its magnitude and orientation and to compute the mean of the velocity of an object as a future work. After that, we decided to estimate it through its OpenCv function (see the code in optical_flow_trajectories.py) to track the feature of a moving object in a video. 
 
