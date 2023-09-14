@@ -48,12 +48,14 @@ Some examples from our predictions:   ########### change image
 #### Training details:
 - batch_size: 16
 - learning_rate: 0.0002
-- epochs: 20 (we have also tried out 50) ############ retrain 20 epochs
+- epochs: 20 (we have also tried out 50)
 - accelerator: 'gpu'
 
 #### Train loss curve:
 
 ![loss_curve_nodepth_50_epochs](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/e46281c2-8d04-48b7-a507-f0c126832c14)
+
+(this graph refers to 50 epochs training!)
 
 From the graph it is clear that the curve has saturated. Having not printed the validation loss curve, in order to avoid the incurring in the overfitting problem, we preferred to stop the training at this point. Anyway, we have also trained this network for 50 epochs and we have noticed that the loss hasn't't decreased significantly since epoch 20.
 
@@ -65,15 +67,17 @@ From the graph it is clear that the curve has saturated. Having not printed the 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/2d004754-c3ab-4a8c-8843-f9a508ccbbd6)
 
 ### Pytorch Unet 2 channels
-We trained this alternative network for 15 epochs and the same training details as before.
+We trained this alternative network for **15 epochs** and, after, also for **50 epochs**. 
 
-Unfortunally, this is what we obtained:
+Unfortunally, what we obtained with 50 epochs' checkpoint was all black images. This result is a clear sign of overfitting! The network had learned trick of how to minimize the loss with minimum effort: generating all equal black images.
+
+Instead, this is the segmented image we obtained loding model's weights from checkpoint at epoch 15:
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/30989a00-fe73-4577-ac70-67adc91b7bb0)
 
 
-Due to the fact that the loss at the end of the training is stabilized at a value of about 0.4, training the model further wouldn't be useful. Training the model for more epochs has lead us to predict all black images, as if the model had found how to minimize the loss in the easiest way possible.
-After having taken some experiments, we can't conclude that giving to the model the "hint" of the depth map helps the model predicting the segmentated image.
+Due to the fact that the loss at the end of the training is stabilized at a value of about 0.4, training the model further than 15 epochs wouldn't be useful. Training the model for more epochs has lead us to predict all black images, as if the model had found how to minimize the loss in the easiest way possible.
+After having taken some experiments, we **can't conclude that giving to the model the "hint" of the depth map helps the model predicting the segmentated image**.
 
 #### Training details:
 - batch_size: 16
@@ -84,8 +88,12 @@ After having taken some experiments, we can't conclude that giving to the model 
 
 #### Train loss curve:
 
+![loss_curve_double_chann_50_epochs](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/da3e4271-61be-40f7-83ba-bc17b99ccb64)
+
 #### Model evaluation:
 
+##### accuracy with 50 epochs:
+##### accuracy with 20 epochs: ##########################
 
 ## Disparity Map and Depth Map
 
