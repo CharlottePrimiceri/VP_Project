@@ -2,6 +2,10 @@
 
 -------------------------------- By Giulia Nardini, Charlotte Ludovica Primiceri, Carmine Zito -----------------------------------------
 
+## Checkpoints
+Inthis folder you can find our checkpoints for single and double channel UNets.
+https://drive.google.com/drive/folders/11pa-SYHlBT2aytHaOC5VzxrfroDWzgCS?usp=sharing
+
 ## Introduction
 For our final project we have focused on the OBJECT DETECTION TASK performed on videos in the Cityscapes Dataset.
 
