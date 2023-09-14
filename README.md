@@ -66,7 +66,7 @@ From the graph it is clear that the curve has saturated. Having not printed the 
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/2d004754-c3ab-4a8c-8843-f9a508ccbbd6)
 
-### Pytorch Unet 2 channels
+### Double channel Pytorch U-Net
 We trained this alternative network for **15 epochs** and, after, also for **50 epochs**. 
 
 Unfortunally, what we obtained with 50 epochs' checkpoint was all black images. This result is a clear sign of overfitting! The network had learned trick of how to minimize the loss with minimum effort: generating all equal black images.
@@ -100,7 +100,7 @@ After having taken some experiments, we **can't conclude that giving to the mode
 ## Disparity Map and Depth Map
 
 Initially we worked on Disparity Map method in order to estimate distance of detected objects, because of its reliablity and accuracy to identify the shapes. 
-But the model required a pair of images for each frame (one frome the "left eye" and the other for the "right eye"), this issue made the model unsuitable for the Unet, that is trained with a dataset composed by "monocular" images.
+But the model required a pair of images for each frame (one frome the "left eye" and the other for the "right eye"), this issue made the model unsuitable for the U-Net, that is trained with a dataset composed by "monocular" images.
 Beacuse of this we moved on to a more suitable method so we chose MiDaS model, that computes depth map starting from a single image.
 Even if MiDaS provides a low quality map compared to the Disparity Map, it comes with better scalability that made the combination between Unet mask and distance map very easy.
 
@@ -111,6 +111,8 @@ Even if MiDaS provides a low quality map compared to the Disparity Map, it comes
 
 Unfortunately, for our initial lack of gpu power, we couldn't implement the optical flow computation through a CNN such as FlowNet2. So we first implement Lucas-Kanade's Optical Flow (as shown in lucas_kanade_optical_flow.ipynb) from scratch to learn how to show its magnitude and orientation and to compute the mean of the velocity of an object as a future work. After that, we decided to estimate it through its OpenCv function (see the code in optical_flow_trajectories.py) to track the feature of a moving object in a video. 
 
+Our Lucas-Kanade-Optical flow is limited by the moving camera mounted on the car. This movement determines that all the image is covered by red vectors (as you can see from the Colab Notebook we posted).
+
 Lucas-Kanade: 
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/18f40f4e-1320-4093-a297-e269d041c165)
@@ -119,15 +121,15 @@ Lucas-Kanade:
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/1b2c4fa3-682e-4213-91ad-b47a7beb1a8a)
 
-# Pre-Process of videos
+# Pre-Processing videos
 
-Our chosen videos are pre processed (divided in frames) and passed both through the segmentation model of the Mask R-CNN and Pytorch Unet. 
+Our chosen videos are pre-processed (divided in frames) and passed both through the segmentation model of the Mask R-CNN and Pytorch U-Net. 
 In order to clear the view of the rgb segmentation of the Mask R-CNN we set the focus only on the main category that appears in the videos (for the first one only pedestrian and the second one only cars).
 The frames are sorted in the right order and then reunited to generate the new videos. This process is shown in MaskRCNN_and_Unet_segmented_video.ipynb file in the segmented_video folder where we can also find all the final videos.
 
 # Compute Trajectories
 
-We chose two kind of videos: the first one is a snippet of a longer video from the Cityscapes site where the camera is moving torwards some people that are passing a street. Here we saw that the main problem is the fact that in this moving scenes also other objects in the background, in which we are not interested, are tracked by the algorithm because the camera it's moving! So we pick another video with a static camera and cars moving. As we can see the number of trajectories only follow them. However the presence of the bounded boxes and the category name that appear for each instance maybe cause some disturbance to the algorithm. 
+We chose two kind of videos: the first one is a snippet of a longer video from the Cityscapes site, where the camera is moving torwards some people that are passing a street. Here we saw that the main problem is the fact that in this moving scenes also other objects in the background, in which we are not interested, are tracked by the algorithm because the camera it's moving! So we pick another video with a static camera and cars moving. As we can see the number of trajectories only follow them. However the presence of the bounded boxes and the category name that appear for each instance maybe cause some disturbance to the algorithm.
 
 ## Showing results
 
