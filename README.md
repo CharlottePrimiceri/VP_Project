@@ -10,7 +10,7 @@ https://drive.google.com/drive/folders/11pa-SYHlBT2aytHaOC5VzxrfroDWzgCS?usp=sha
 ## Introduction
 For our final project we have focused on the OBJECT DETECTION TASK performed on videos in the Cityscapes Dataset.
 
-Our aim was to investigate whether the segmentation task could be improved or not training deep learning models on the depth maps. At the beginning we tought about enforcing the prediction of the segmented images through the graphic representation of the optical flow, but unfortunately this was far beyond our possibilities. Anyway, we applied an algorithm in order to plot the trajectories of segmented objects in videos based on the optical flow computation, which we implemented also "by hand".
+Our aim was to investigate whether the segmentation task could be improved or not by training deep learning models on the depth maps. At the beginning we tought about enforcing the prediction of the segmented images through the graphic representation of the optical flow, but unfortunately this was far beyond our possibilities. Anyway, we applied an algorithm in order to plot the trajectories of segmented objects in videos based on the optical flow computation, which we implemented also "by hand".
 
 We have performed image segmentation on a video taken from Cityscapes Dataset using three different models:
   1)  Mask-RCNN pre-trained on COCO Dataset (Detectron2 implementation);
@@ -29,7 +29,7 @@ We tried to perform fine-tuning of the Mask-RCNN on the Cityscapes Dataset and w
 We didn't manage to re-train the Mask-RCNN due to lack of computational resources and the complexity of the model (...), so at the end we opted for the Pytorch Unet, a simpler model on which we made more experiments. We also realized that it makes no sense to continue training a model that has already reached very high performances.
 
 #### Model settings
-Because we were interested in classifying and segmenting only three classes (pedestrians, cars, bycicles) we filtered our annotations to focus only on these categories. Moreover, in order to show a better visualization of the output predictions we set the segmentation color as shades of the same tone for each category. As another pre processing step we had to register our costum dataset (cityscapes with filtered coco annotations). We specify that we worked with a 'cpu' accelerator to make predictions. 
+Because we were interested in classifying and segmenting only three classes (pedestrians, cars, bicycles) we filtered our annotations to focus only on these categories. Moreover, in order to show a better visualization of the output predictions we set the segmentation color as shades of the same tone for each category. As another pre processing step we had to register our costum dataset (cityscapes with filtered coco annotations). We specify that we worked with a 'cpu' accelerator to make predictions. 
 
 ### Pytorch Unet 1 channel
 Target example:
