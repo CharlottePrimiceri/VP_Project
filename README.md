@@ -26,33 +26,41 @@ We have performed image segmentation on a video taken from Cityscapes Dataset us
 
 #### Cityscapes to COCO conversion
 We tried to perform fine-tuning of the Mask-RCNN on the Cityscapes Dataset and we transformed our dataset annotations in COCO format because this is the requested input for this model in Detectron2.
-We didn't manage to re-train the Mask-RCNN due to lack of computational resources and the complexity of the model (...), so at the end we opted for the Pytorch Unet, a simpler model on which we made more experiments. We also realized that it makes no sense to continue training a model that has already reached very high performances.
+
+#### Unable to fine-tune on Cityscapes Dataset
+We didn't manage to re-train the Mask-RCNN due to lack of computational resources and the complexity of the model (...), so at the end we opted for the Pytorch Unet, a simpler model on which we were able to make more experiments. We also realized that it makes no sense training a model that has already reached very high performances.
 
 #### Model settings
-Because we were interested in classifying and segmenting only three classes (pedestrians, cars, bicycles) we filtered our annotations to focus only on these categories. Moreover, in order to show a better visualization of the output predictions we set the segmentation color as shades of the same tone for each category. As another pre processing step we had to register our costum dataset (cityscapes with filtered coco annotations). We specify that we worked with a 'cpu' accelerator to make predictions. 
+Because we were interested in classifying and segmenting only three classes (pedestrians, cars, bicycles) we filtered our annotations to focus only on these categories. Moreover, in order to show a better visualization of the output predictions we set the segmentation color as shades of the same tone for each category. As another pre-processing step we had to register our Costum Dataset (Cityscapes with filtered COCO annotations).
+We specify that we worked with a 'cpu' accelerator to make predictions. 
 
-### Pytorch Unet 1 channel
+### Single-channel Pytorch U-Net
 Target example:
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/01be8415-b49e-44ce-b896-53868e6ba2f2)
 
-We trained from start the orginal Pytorch Unet for 15 epochs and the result we got was not so distant from the target. 
+We trained from start the orginal Pytorch Unet for 50 epochs and the result we got was not so distant from the target. 
 
-Some examples from our predictions:
+Some examples from our predictions:   ########### change image
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/2f3b7dfd-cba0-4dc0-a55b-1e4f983ef106)
 
 #### Training details:
 - batch_size: 16
 - learning_rate: 0.0002
-- epochs: 50
+- epochs: 20 (we have also tried out 50) ############ retrain 20 epochs
 - accelerator: 'gpu'
 
 #### Train loss curve:
 
+![loss_curve_nodepth_50_epochs](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/e46281c2-8d04-48b7-a507-f0c126832c14)
+
+From the graph it is clear that the curve has saturated. Having not printed the validation loss curve, in order to avoid the incurring in the overfitting problem, we preferred to stop the training at this point. Anyway, we have also trained this network for 50 epochs and we have noticed that the loss hasn't't decreased significantly since epoch 20.
+
 #### Model evaluation: 
 
-##### accuracy: 0.9446
+##### accuracy with 50 epochs: 0.9446
+##### accuracy with 20 epochs: ##########################
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/2d004754-c3ab-4a8c-8843-f9a508ccbbd6)
 
