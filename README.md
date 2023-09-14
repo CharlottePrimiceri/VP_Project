@@ -82,7 +82,7 @@ After having taken some experiments, we **can't conclude that giving to the mode
 #### Training details:
 - batch_size: 16
 - learning_rate: 0.0002
-- epochs: 50
+- epochs: 15 (we also tried out 50 epochs)
 - accelerator: 'gpu' model: GeForce RTX 3070
 - Time: 2h
 
