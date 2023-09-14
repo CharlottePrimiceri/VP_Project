@@ -71,7 +71,8 @@ After having taken some experiments, we can't conclude that giving to the model 
 - batch_size: 16
 - learning_rate: 0.0002
 - epochs: 50
-- accelerator: 'gpu'
+- accelerator: 'gpu' model: GeForce RTX 3070
+- Time: 2h
 
 #### Train loss curve:
 
