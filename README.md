@@ -10,7 +10,7 @@ https://drive.google.com/drive/folders/11pa-SYHlBT2aytHaOC5VzxrfroDWzgCS?usp=sha
 ## Introduction
 For our final project we have focused on the OBJECT DETECTION TASK performed on videos in the Cityscapes Dataset.
 
-Our aim was to investigate whether the segmentation task could be improved or not by training deep learning models on the depth maps. At the beginning we tought about enforcing the prediction of the segmented images through the graphic representation of the optical flow, but unfortunately this was far beyond our possibilities. Anyway, we applied an algorithm in order to plot the trajectories of segmented objects in videos based on the optical flow computation, which we implemented also "by hand".
+Our aim was to investigate whether the segmentation task could be improved or not by training deep learning models on the depth maps. At the beginning we tought about enforcing the prediction of the segmented images through the graphic representation of the optical flow, but unfortunately this was far beyond our possibilities. Anyway, we applied an algorithm in order to plot the trajectories of segmented objects in videos based on the optical flow computation (which we implemented also "by hand").
 
 We have performed image segmentation on a video taken from Cityscapes Dataset using three different models:
   1)  Mask-RCNN pre-trained on COCO Dataset (Detectron2 implementation);
