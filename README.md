@@ -3,7 +3,7 @@
 -------------------------------- By Giulia Nardini, Charlotte Ludovica Primiceri, Carmine Zito -----------------------------------------
 
 ## Checkpoints
-In this folder you can find our checkpoints for single and double channel UNets.
+In this folder you can find our checkpoints for single and double channel UNets (they are to big to upload here).
 
 https://drive.google.com/drive/folders/11pa-SYHlBT2aytHaOC5VzxrfroDWzgCS?usp=sharing
 
