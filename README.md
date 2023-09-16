@@ -65,6 +65,9 @@ From the graph it is clear that the curve has saturated. Having not printed the 
 
 #### Model evaluation: 
 
+![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/0babd4ef-76f5-4336-83bd-55320277c3ec)
+
+
 ##### accuracy with 50 epochs:
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/1178f7e8-7f61-41c6-abf5-a1fc170d94f0)
