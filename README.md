@@ -110,10 +110,12 @@ After having taken some experiments, we **can't conclude that giving to the mode
 
 # Disparity Map and Depth Map
 
-Initially we worked on Disparity Map method in order to estimate distance of detected objects, because of its reliablity and accuracy to identify the shapes. 
-But the model required a pair of images for each frame (one frome the "left eye" and the other for the "right eye"), this issue made the model unsuitable for the U-Net, that is trained with a dataset composed by "monocular" images.
-Beacuse of this we moved on to a more suitable method so we chose MiDaS model, that computes depth map starting from a single image.
-Even if MiDaS provides a low quality map compared to the Disparity Map, it comes with better scalability that made the combination between Unet mask and distance map very easy.
+Initially we worked on Disparity Map method in order to estimate distance of detected objects, Disparity Map is based on Block Matching algorithm, that trhough "blocks" of which params are set, estimate distance of the objects.
+Inaccuracy of the output image compared to the input ones, pushed us to movo on another method to estimate a depth mapm, so we chose MiDaS model.
+MiDaS model is trained on 12 datasets, we chose it because of its high accuracy and its high scalability in order to be used with classes and data never treated before, according to its low zero-shot error (0.1106).
+There are three different MiDaS models, we chose MiDaS Hybrid above the others due to its faster time processing, compared to MiDaS Large, and better accuracy compared to MiDaS small.
+From the direct comparison between outputs of Disparity Map and MiDaS model it results that depth map computed by the second one provides enough informations aboout distance of the object, without redundant informations on not important data (such as treet or objects not related to classificated ones).
+
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/d8e56dea-1519-439b-a00e-9300640f96fe)
 
