@@ -87,7 +87,7 @@ This is the segmented image we obtained loding model's weights from checkpoint a
 
 
 ############### change comment after printing the loss
-Due to the fact that the loss at the end of the training is stabilized at a value of about 0.4, training the model further than 15 epochs wouldn't be useful. Training the model for more epochs has lead us to predict all black images, as if the model had found how to minimize the loss in the easiest way possible.
+Due to the fact that the loss at the end of the training is stabilized at a value of about 0.4, training the model further than 20 epochs wouldn't be useful. 
 After having taken some experiments, we **can't conclude that giving to the model the "hint" of the depth map helps the model predicting the segmentated image**.
 
 #### Training details:
