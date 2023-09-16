@@ -412,10 +412,19 @@ def main():
        print("    - model restored from file....")
        print("    - filename = %s" % file_model)
 
-    ### Insert path to folder ...cityscapes/depth/
+    ### Insert path to folder ...cityscapes/depth/test/
     ### depth images in this folder must have the same order as their correspondent original image in leftImg8bit
-    depth_dir = ############
-    depth_images = os.listdir(depth_dir)
+    depth_dir = "C:/Users/gnard/Documents/v/testare_modello/cityscapes/depth/test/test/"
+    cities = os.listdir(depth_dir) # list of city folders
+    city_paths = list([])
+    for city in cities:
+        city_paths.append(depth_dir + str(city) + '/') # list of paths to city folders
+    depths = list([])
+    for city_folder in city_paths: 
+        depth_files = os.listdir(city_folder)  # list of image files in a city folder
+        paths_to_depths = []
+        for file in depth_files:
+            paths_to_depths.append(city_folder+str(file))  # list of paths to image files
 
     # Loop through the dataset and evaluate how well the network predicts
     print("\nevaluating network (will take a while)...")
@@ -426,10 +435,10 @@ def main():
         # send to the GPU and do a forward pass
         start_time = time.time()
         x = Variable(imagergb).to(device)
-        depth_map = Image.open(depth_images[idx_batch]).convert('RGB')
+        depth_map = Image.open(paths_to_depths[idx_batch]).convert('RGB')
         depth_map = TF.resize(depth_map, size=(128, 256), interpolation=Image.BILINEAR)
         depth_map = TF.to_tensor(depth_map)
-        depth_map = Variable(depth_map).to(device)
+        depth_map = Variable(depth_map).to(device).unsqueeze(dim=0)
         y_ = Variable(label_class).to(device)
         y = generator.forward(x, depth_map)
         end_time = time.time()
