@@ -96,9 +96,7 @@ After having taken some experiments, we **can't conclude that giving to the mode
 
 #### Train loss curve:
 
-![loss_curve_double_chann_50_epochs](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/da3e4271-61be-40f7-83ba-bc17b99ccb64)
-
-(This graph refers to 50 epochs training!)
+######################à plot loss curve
 
 #### Model evaluation:
 
