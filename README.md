@@ -44,9 +44,8 @@ We trained from start the orginal Pytorch Unet for 50 epochs and the result we g
 Some examples from our predictions with 50 epochs training:
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/115116451/493ed8b3-0ffd-4652-9133-4358ea24304f)
-![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/2f3b7dfd-cba0-4dc0-a55b-1e4f983ef106)
 
-Examples of predicted batch with 20 epochs training:
+Example of predicted batch with 20 epochs training:
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/115116451/f3ddf8bb-79df-4c6e-9f3e-2e56ca201d07)
 
