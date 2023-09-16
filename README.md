@@ -41,14 +41,18 @@ Target example:
 
 We trained from start the orginal Pytorch Unet for 50 epochs and the result we got was not so distant from the target. 
 
-Some examples from our predictions:   ########### change image
+Some examples from our predictions with 50 epochs training:
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/2f3b7dfd-cba0-4dc0-a55b-1e4f983ef106)
+
+Examples of predicted batch with 20 epochs training:
+
+############ add image 
 
 #### Training details:
 - batch_size: 16
 - learning_rate: 0.0002
-- epochs: 20 (we have also tried out 50)
+- epochs: 20, 50
 - accelerator: 'gpu'
 
 #### Train loss curve:
@@ -57,7 +61,7 @@ Some examples from our predictions:   ########### change image
 
 (this graph refers to 50 epochs training!)
 
-From the graph it is clear that the curve has saturated. Having not printed the validation loss curve, in order to avoid the incurring in the overfitting problem, we preferred to stop the training at this point. Anyway, we have also trained this network for 50 epochs and we have noticed that the loss hasn't't decreased significantly since epoch 20.
+From the graph it is clear that the curve has saturated. Having not printed the validation loss curve, in order to avoid incurring in the overfitting problem, we preferred to stop the training at 20 epochs. Going on training this network until 50 epochs we have noticed that the loss hasn't't decreased significantly since epoch 20.
 
 #### Model evaluation: 
 
@@ -72,13 +76,11 @@ From the graph it is clear that the curve has saturated. Having not printed the 
 
 
 ### Double channel Pytorch U-Net
-We trained this alternative network for **15 epochs** and, after, also for **50 epochs**. 
+At the beginning we trained this alternative network for **20 epochs**, but, unfortunately, running the predict code we obtained all black images. This result is a clear sign of overfitting! The network had learned trick of how to minimize the loss with minimum effort: generating all equal black images. So, we decided to stop the training at epoch 4 and the results we obtained weren't so bad! It is clear that with 4 epochs the network is able to distinguish at least the roads.
 
-Unfortunally, what we obtained with 50 epochs' checkpoint was all black images. This result is a clear sign of overfitting! The network had learned trick of how to minimize the loss with minimum effort: generating all equal black images.
+Instead, this is the segmented image we obtained loding model's weights from checkpoint at epoch 4:
 
-Instead, this is the segmented image we obtained loding model's weights from checkpoint at epoch 15:
-
-![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/30989a00-fe73-4577-ac70-67adc91b7bb0)
+################## image
 
 
 Due to the fact that the loss at the end of the training is stabilized at a value of about 0.4, training the model further than 15 epochs wouldn't be useful. Training the model for more epochs has lead us to predict all black images, as if the model had found how to minimize the loss in the easiest way possible.
