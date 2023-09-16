@@ -81,7 +81,7 @@ From the graph it is clear that the curve has saturated. Having not printed the 
 ### Double channel Pytorch U-Net
 At the beginning we trained this alternative network for **20 epochs**, but, unfortunately, running the predict code we obtained all black images. This result is a clear sign of overfitting! The network had learned trick of how to minimize the loss with minimum effort: generating all equal black images. So, we decided to stop the training at **epoch 4** and the results were much weaker than those obtained with the other unet. Anyway, it is clear that with 4 epochs the network is able to distinguish at least the roads.
 
-Instead, this is the segmented image we obtained loding model's weights from checkpoint at epoch 4:
+This is the segmented image we obtained loding model's weights from checkpoint at epoch 4:
 
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/0c536a6f-b045-43be-a1ad-4ddf4224d652)
 
