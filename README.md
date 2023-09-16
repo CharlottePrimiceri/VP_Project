@@ -87,7 +87,6 @@ This is the segmented image we obtained loding model's weights from checkpoint a
 ![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/0c536a6f-b045-43be-a1ad-4ddf4224d652)
 
 
-############### change comment after printing the loss
 Due to the fact that the loss at the end of the training is stabilized at a value of about 0.4, training the model further wouldn't be useful. 
 After having taken some experiments, we **can't conclude that giving to the model the "hint" of the depth map helps the model predicting the segmentated image**.
 
@@ -96,7 +95,6 @@ After having taken some experiments, we **can't conclude that giving to the mode
 - learning_rate: 0.0002
 - epochs: 4 (we also tried out 20 epochs)
 - accelerator: 'gpu' model: GeForce RTX 3070
-- Time: #######################
 
 #### Train loss curve:
 
