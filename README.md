@@ -99,7 +99,9 @@ After having taken some experiments, we **can't conclude that giving to the mode
 
 #### Train loss curve:
 
-###################### plot loss curve for 20 epochs and highlight epoch 4 in the graph
+![Screenshot from 2023-09-16 12-16-01](https://github.com/CharlottePrimiceri/VP_Project/assets/115116451/c25abb75-4eb7-471f-aa21-209a60a0f5ea)
+
+(this graph refers to 20 epochs training! See 4th epoch)
 
 #### Model evaluation:
 
