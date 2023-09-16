@@ -61,8 +61,15 @@ From the graph it is clear that the curve has saturated. Having not printed the 
 
 #### Model evaluation: 
 
-##### accuracy with 50 epochs: ###################
-##### accuracy with 20 epochs: ##########################
+##### accuracy with 50 epochs:
+
+![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/1178f7e8-7f61-41c6-abf5-a1fc170d94f0)
+
+
+##### accuracy with 20 epochs:
+
+![image](https://github.com/CharlottePrimiceri/VP_Project/assets/114931709/f0bdd6fd-1064-4c51-8282-6e2cca4929b5)
+
 
 ### Double channel Pytorch U-Net
 We trained this alternative network for **15 epochs** and, after, also for **50 epochs**. 
