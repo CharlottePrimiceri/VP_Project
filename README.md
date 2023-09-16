@@ -76,7 +76,7 @@ From the graph it is clear that the curve has saturated. Having not printed the 
 
 
 ### Double channel Pytorch U-Net
-At the beginning we trained this alternative network for **20 epochs**, but, unfortunately, running the predict code we obtained all black images. This result is a clear sign of overfitting! The network had learned trick of how to minimize the loss with minimum effort: generating all equal black images. So, we decided to stop the training at epoch 4 and the results much weaker than those obtained with the other unet. Anyway, it is clear that with 4 epochs the network is able to distinguish at least the roads.
+At the beginning we trained this alternative network for **20 epochs**, but, unfortunately, running the predict code we obtained all black images. This result is a clear sign of overfitting! The network had learned trick of how to minimize the loss with minimum effort: generating all equal black images. So, we decided to stop the training at **epoch 4** and the results much weaker than those obtained with the other unet. Anyway, it is clear that with 4 epochs the network is able to distinguish at least the roads.
 
 Instead, this is the segmented image we obtained loding model's weights from checkpoint at epoch 4:
 
@@ -90,18 +90,18 @@ After having taken some experiments, we **can't conclude that giving to the mode
 #### Training details:
 - batch_size: 16
 - learning_rate: 0.0002
-- epochs: 15 (we also tried out 50 epochs)
+- epochs: 4 (we also tried out 20 epochs)
 - accelerator: 'gpu' model: GeForce RTX 3070
-- Time: 2h
+- Time: #######################
 
 #### Train loss curve:
 
-######################à plot loss curve
+###################### plot loss curve for 20 epochs and highlight epoch 4 in the graph
 
 #### Model evaluation:
 
-##### accuracy with 50 epochs:
-##### accuracy with 20 epochs: ##########################
+##### accuracy with 4 epochs: ########################## test the model
+##### accuracy with 20 epochs: ########################## test the model
 
 # Disparity Map and Depth Map
 
